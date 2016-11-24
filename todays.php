@@ -17,28 +17,6 @@ $today_date = date("M/d/y g:i a");
 // }
 //?>
 
-<!--table align="left">
-	<tr>
-		<td>
-		<table id="namazTable" cellSpacing="0" cellPadding="0" width="500" border="0">
-			<TR>
-				<?php
-				foreach ($data as $key => $value) {
-					echo "<td>{$key}</td>";
-				}
-				?>
-			</TR>
-			<tr>
-				<?php
-				foreach ($data as $key => $value) {
-					# conversion into 12 Hr time
-					$namaz_time = date('g:i a', strtotime($value));
-					echo "<td>{$namaz_time}</td>";
-				}
-				?>
-			</tr>
-		</table>
-</table-->
 <style type="text/css">
 	body {
 		background-color: #F8F8F8;
@@ -88,25 +66,13 @@ $today_date = date("M/d/y g:i a");
 		$datediff = $date - $current;
 		$difference = floor($datediff / (60 * 60 * 24));
 		
-		print "<br>";
-		if ($difference == 0) {
-			print "$date : today";
-		} else if ($difference > 1) {
-			print '$date : Future Date';
-		} else if ($difference > 0) {
-			print '$date : tomarrow';
-		} else if ($difference < -1) {
-			print '$date : Long Back';
-		} else {
-			print '$date : yesterday';
-		}
 
 		foreach ($namaz_times as $key => $value) {
 
 			echo "<TR align=\"right\" class=\"namaz\">";
 			echo "<td class=\"namaz\">{$key}:</td>";
 			// convert it into 12 Hour time format
-			$namaz_time = date('g:i', strtotime($value));
+			$namaz_time = date('g:i A', strtotime($value));
 			echo "<td class=\"namaz\" align=\"right\">{$namaz_time}</td>";
 			echo "</TR>";
 		}
