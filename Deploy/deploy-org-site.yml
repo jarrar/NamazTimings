@@ -1,0 +1,28 @@
+#
+# What is it?
+#
+- hosts: all
+  tasks:
+    - name: Pingging ...
+      ping:
+
+    #- name: Copy files
+    #  copy: src=./jj.txt dest=/home/iabatadmin/public_html/JARRAR/.
+
+    - name: Ensure that main dir exists
+      file: path={{ dest_dir }} state=directory
+
+    - name: Ensure that conf dir exists
+      file: path={{ conf_dir }} state=directory
+
+    - name: Copying conf dir
+      copy: src={{ item }} dest={{ dest_dir }}
+      with_items:
+         #- "{{ src_data.conf_dir }}"
+         - "../conf"
+
+    - name: Copy conf files
+      copy: src={{ item }} dest={{ dest_dir }}/
+      with_items:
+         - "{{ src_data.viewer_php }}"
+         - "{{ src_data.controler_php }}"

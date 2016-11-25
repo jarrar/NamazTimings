@@ -1,0 +1,9 @@
+site_target_dir: /home/iabatadmin/public_html/
+src_data: {
+    viewer_php: ../todays.php,
+    controler_php: ../namazTimes.php,
+    conf: ../conf
+    }
+
+dest_dir: /home/iabatadmin/public_html/prayer
+conf_dir: /home/iabatadmin/public_html/prayer/conf
