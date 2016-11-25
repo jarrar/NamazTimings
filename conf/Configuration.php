@@ -7,7 +7,7 @@
  */
 
 /**
- *
+ * 1920 Hwy-54,Suite 150, Durham, NC, 27713
  * @author jjaffari
  */
 interface Configuration {
@@ -15,11 +15,11 @@ interface Configuration {
     const ORG_TIME_ZONE = "America/New_York";
     const GMT_DST = "-240";
     const GMT_EST = "-300";
-    const ORG_ADDRESS_NUMBER = "4130";
-    const ORG_ADDRESS_STREET = "plum branch dr";
-    const ORG_ADDRESS_CITY = "Cary";
+    const ORG_ADDRESS_NUMBER = "1920";
+    const ORG_ADDRESS_STREET = "Hwy-54,Suite 150";
+    const ORG_ADDRESS_CITY = "Durham";
     const ORG_ADDRESS_STATE = "NC";
-    const ORG_ADDRESS_ZIP = "27519";
+    const ORG_ADDRESS_ZIP = "27713";
 // Google address bar
 
 
