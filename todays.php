@@ -44,9 +44,9 @@ $today_date = date("M/d/y g:i A");
 
 <!--?php print date('H'); ?-->
 <table class="namaz" style="padding:0px">
-    <tr><td align="left" class="namaz" width="150"><?php echo $today_date ?></td></tr>
+    <tr><td align="center" class="namaz" width="150"><?php echo $today_date ?></td></tr>
     <tr><td align="center" class="namaz">
-            <table align="left" class="namaz" style="padding:0px">
+            <table align="center" class="namaz" style="padding:0px">
                 <?php
                 // WILL use this mechanism to find if the date is different from when last we picked the times.
                 $current = strtotime(date("Y-m-d"));
@@ -57,8 +57,8 @@ $today_date = date("M/d/y g:i A");
 
                 foreach ($namaz_times as $key => $value) {
 
-                    echo "<TR align=\"right\" class=\"namaz\">";
-                    echo "<td class=\"namaz\">{$key}:</td>";
+                    echo "<TR align=\"center\" class=\"namaz\">";
+                    echo "<td align=\"right\" class=\"namaz\">{$key}:</td>";
                     // convert it into 12 Hour time format
                     $namaz_time = date('g:i a', strtotime($value));
                     echo "<td class=\"namaz\" align=\"right\">{$namaz_time}</td>";
